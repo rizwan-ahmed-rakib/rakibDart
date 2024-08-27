@@ -19,7 +19,7 @@ void main() {
   print("Hi, I am " + name + ". I am " + "$age" + "years old. ");
 
   print("meritorias status   $status for $arry");
-  print("i am with my family for "+arry[2]);
+  print("i am with my family for " + arry[2]);
 
 /////////////////////////////////////////////////////////////////
 
@@ -32,6 +32,7 @@ void main() {
   };
 
   print(person);
+  print("your age is " + person['age'].toString());
 
 ////////////////////////////////////////////////////////////////////
 
@@ -118,24 +119,35 @@ void main() {
   }
   /////////////////////////////////////////////////
   ///
-  String a='my';
-  String b='name';
-  String c='is';
-  String d='Rakib';
+  String a = 'my';
+  String b = 'name';
+  String c = 'is';
+  String d = 'Rakib';
   print("$a $b $c $d");
 
-  List e=['my ','name ','is ','RA Rakib'];
+  List e = ['my ', 'name ', 'is ', 'RA Rakib'];
   print(e.join());
 
   ///////////////////////////////////////////////////
   ///
-  addNumbers(){
-    print(100+10);
+  addNumbers() {
+    print(100 + 10);
   }
-  resultFunction(addNumbers);
 
-  
-}
-resultFunction(Function function){
-    function();
+ print(addNumbers());
+
+  addNumberss() {
+    int a = 9;
+    int b = 10;
+    print(a + b);
+     return a+b;
   }
+  print(addNumberss());
+  // resultFunction(addNumbers);
+  resultFunction(addNumberss,addNumbers);
+}
+
+resultFunction( function, f) {
+  function();
+  f();
+}
